@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+:root {
+    --font-family: "Poppins", sans-serif;
+    --green: #50c878;
+    --red: #cf352e;
+    --blue: #2386b8;
+    --rainbow: linear-gradient(
+        45deg,
+        rgba(255, 0, 0, 1) 10%,
+        rgba(255, 154, 0, 1) 20%,
+        rgba(208, 222, 33, 1) 40%,
+        rgba(63, 218, 216, 1) 60%,
+        rgba(95, 21, 242, 1) 80%,
+        rgba(186, 12, 248, 1) 100%
+    );
+    --see-through-white: rgba(255, 255, 255, 0.8);
+    --controls-border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.color-pickers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.color-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+}
+
+.color-container div {
+    width: 25px;
+    height: 25px;
+    background: var(--rainbow);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color-container input {
+    appearance: none;
+    border-width: 0px;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+}
+
+.color-container input::-webkit-color-swatch {
+    align-self: center;
+    border: none;
+    border-radius: 50%;
+    block-size: 25px;
+}
+
+.color-container.active {
+    border: 1px solid black;
+}
